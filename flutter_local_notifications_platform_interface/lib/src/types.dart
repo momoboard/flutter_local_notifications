@@ -43,6 +43,8 @@ class ActiveNotification {
     this.body,
     this.payload,
     this.tag,
+    this.targetContentId,
+    this.identifier,
     this.bigText,
   });
 
@@ -77,6 +79,12 @@ class ActiveNotification {
   ///
   /// Returned only on Android.
   final String? tag;
+
+  /// Returned only on IOS.
+  final String? identifier;
+
+  /// Returned only on IOS.
+  final String? targetContentId;
 
   /// The notification's longer text displayed using big text style.
   ///
