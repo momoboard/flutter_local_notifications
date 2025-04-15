@@ -123,8 +123,10 @@ class FlutterLocalNotificationsWindows extends WindowsNotificationsBase {
     userCallback?.call(response);
   }
 
+
+
   @override
-  Future<void> cancel(int id) async {
+  Future<void> cancel(int id, {String? tag, String? identifier}) async {
     if (!_isReady) {
       throw StateError(
         'Flutter Local Notifications must be initialized before use',
